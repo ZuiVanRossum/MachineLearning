@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4 P's</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styleah.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<br> <br>
+        <div class="container">
+            {% if WhatGame %}
+                <h2>WELCOME TO GAME ZONE!</h2>
+                <div class="recommended-games"> 
+                    {% for game in SetGames %}
+                        <div>
+                            <img src="{{ url_for('static', filename=game[1]) }}" alt="{{ game[0] }}" class="img-thumbnail">
+                            <h5>{{ game[0] }}</h5>
+                        </div>
+                    {% endfor %}
+                </div>
+                <br> <br> <br>
+                <h3>YOU MAY ALSO LIKE</h3>
+                <div class="row justify-content-center">
+                    {% for game in RelatedGames[:2] %}
+                        <div class="col-md-6 text-center">
+                            <div>
+                                <img src="{{ url_for('static', filename=game[1]) }}" alt="{{ game[0] }}" class="img-thumbnail">
+                                <h5>{{ game[0] }}</h5>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a href="/" class="btn btn-clear float-right"><i class="fas fa-sync-alt"></i> Clear</a>
+                <div class="clearfix"></div> 
+            {% endif %}
+        </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/static/images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1,h2,h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FDA403; 
+}
+
+h5, h2, h6, label {
+    color: #FDA403;
+    text-align: center;
+
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FDA403; 
+}
+
+select, .btn {
+    border-radius: 8px;
+}
+
+.select-label {
+    margin-right: 10px;
+}
+
+.btn-warning {
+    background-color: #FDA403;
+    color: black;
+    border-color: #FDA403;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.recommended-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommended-games div{
+    flex: 0 0 32%; 
+    margin-bottom: 20px; 
+}
+
+.img-thumbnail {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.btn-clear {
+    background-color: transparent;
+    color: #FDA403;
+    border: 2px solid #FDA403;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-clear:hover {
+    color: hotpink;
+    border-color: #FDA403;
+}
